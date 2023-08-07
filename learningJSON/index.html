@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON Example</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            // usually JSON is a string, not a JS object
+            let companies = `[
+                {
+                    "name": "Big Corporation",
+                    "numberOfEmployees": 10000,
+                    "ceo": "Mary",
+                    "rating": 3.6
+                },
+                {
+                    "name": "Small Startup",
+                    "numberOfEmployees": 3,
+                    "ceo": null,
+                    "rating": 4.3
+                }
+            ]`
+            
+            /*    
+                JSON.parse() takes the string and converts that string into a JS object
+                and using the parse property, the JS object can be used as any other normal array or object 
+            */
+            console.log(JSON.parse(companies));
+            console.log(JSON.parse(companies)[0].name);
+        </script>
+    </body>
+</html>
